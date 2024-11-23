@@ -1,16 +1,25 @@
 "use client";
+
 import { addTask } from "@/redux/features/task/taskSlice";
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { useDispatch } from "react-redux";
-// import { addTask } from "../features/taskSlice";
 import { v4 as uuidv4 } from "uuid"; // To generate unique IDs
+
+// Define the types for formData
+type FormData = {
+    taskTitle: string;
+    priority: "low" | "medium" | "high"; // Explicit type for priority
+    deadline: string;
+    description: string;
+};
 
 const TaskForm: React.FC = () => {
     const dispatch = useDispatch();
 
-    const [formData, setFormData] = useState({
+    // Define formData with the correct type
+    const [formData, setFormData] = useState<FormData>({
         taskTitle: "",
-        priority: "low",
+        priority: "low", // Initial value is "low"
         deadline: "",
         description: "",
     });

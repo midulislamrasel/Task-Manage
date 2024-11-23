@@ -33,13 +33,13 @@ const NavData = [
     {
         id: "nav5",
         text: "Completed Task",
-        Icon: ProfileIcon,
+        Icon: TaskIcon,
         link: "/completedtask",
     },
     {
         id: "nav6",
         text: "My Profile",
-        Icon: TaskIcon,
+        Icon: ProfileIcon,
         link: "/profile",
     },
 ];
