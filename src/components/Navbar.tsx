@@ -2,10 +2,8 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import CloseIcon from "@/utils/icons/CloseIcon";
 import NavData from "@/utils/mock/NavData/NavData";
-import LogoIcon from "@/utils/icons/logoIcon";
-import HomeIcon from "@/utils/icons/HomeIcon";
+import LogoIcon from "@/utils/icons/LogoIcon";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -39,9 +37,9 @@ export default function Navbar() {
 
                 {/* ===========Map start======= */}
                 <ul className="space-y-4">
-                    {NavData.map(({ id, text, Icon }) => (
+                    {NavData.map(({ id, text, Icon, link }) => (
                         <li key={id}>
-                            <Link href="/">
+                            <Link href={link}>
                                 <span className="block py-2 px-4 hover:bg-blue-600 hover:text-white rounded cursor-pointer transition-colors">
                                     {isOpen ? (
                                         <div className="flex items-center gap-3">
