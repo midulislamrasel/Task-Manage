@@ -15,7 +15,7 @@ const componentName = () => {
                 <HomeOngoinTask />
             </div>
             <div>
-                <h3 className="text-3xl text-center"> To Do Task</h3>
+                <h3 className="text-3xl text-center"> Done Task</h3>
                 <HomeCompletedTask />
             </div>
         </div>
